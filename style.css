@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+ul{ list-style: none; }
+a{ text-decoration: none; }
+
+#wrapper{
+    padding: 80px 8px;
+}
+
+.container{
+    margin: 0 auto;
+    height: 100%;
+    max-width: 680px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logotype{
+    max-width: 100px;
+    margin-bottom: 40px;
+
+    user-select: none;
+}
+
+.title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    color: #000;
+
+    user-select: none;
+}
+
+/* LINKS LIST */
+
+.list{
+    width: 100%;
+    margin-top: 80px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    grid-gap: 60px;
+}
+
+.list__link{
+    padding: 16px 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: #fff;
+    box-shadow: 0px 2.75186px 10.3195px 8.25557px rgba(0, 0, 0, 0.04);
+    border-radius: 16px;
+
+    user-select: none;
+}
+
+.list__link__content{
+    margin-bottom: auto;
+    margin-top: auto;
+
+    text-align: center;
+}
+
+.list__link__content__icon{
+    min-height: 90px;
+}
+
+.list__link__content__title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    color: #454545;
+
+    margin-top: 16px;
+}
+
+.list__link__content__subtitle{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #787878;
+
+    margin-top: 6px;
+}
+
+.list__link__button{
+    position: relative;
+    padding: 16px 28px;
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+
+    border-radius: 16px;
+    background-color: #4A98FF;
+    color: #FFF;
+
+    box-shadow: none;
+
+    transition: 0.3s box-shadow;
+}
+
+.list__link__button:hover{
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.16);
+}
+
+.list__link__button span{
+    user-select: none;
+}
+
+.list__link__button img{
+    position: absolute;
+    right: 28px;
+    top: calc(50% - 10px);
+
+    height: 18px;
+
+    user-select: none;
+}
+
+@media screen and (max-width: 692px) {
+    .container{
+        padding: 10px 40px;
+    }
+
+    .list{
+        width: 100%;
+        margin-top: 40px;
+    
+        display: flex;
+        flex-direction: column;
+        grid-gap: 25px;
+    }
+
+    .list__link{
+        position: relative;
+
+        padding-right: 60px;
+    }
+
+    .list__link__content{
+        display: flex;
+        align-items: center;
+        text-align: left;
+        grid-gap: 25px;
+    }
+
+    .list__link__content__icon{
+        min-height: 60px;
+        max-height: 60px;
+    }
+
+    .list__link__content__title{
+        margin-top: 0;
+    }
+
+    .list__link__button{
+        position: absolute;
+        top: calc(50% - 25px);
+        right: -26px;
+        height: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: #4A98FF;
+        border-radius: 20px;
+    }
+    
+    .list__link__button span{
+        display: none;
+    }
+
+    .list__link__button img{
+        position: relative;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #wrapper{
+        padding-top: 50px;
+    }
+    
+    .container{
+        padding: 10px 20px;
+    }
+
+    .list__link__content__title{
+        font-size: 20px;
+    }
+    
+    .list__link__content__subtitle{
+        font-size: 12px;
+    }
+
+    .list__link__button{
+        position: absolute;
+        top: calc(50% - 25px);
+        right: -16px;
+        height: 50px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: #4A98FF;
+        border-radius: 20px;
+    }
+
+    .list__link__button img{
+        position: absolute;
+        right: auto;
+        top: calc(50% - 8px);
+    
+        height: 16px;
+    
+        user-select: none;
+    }
+}
